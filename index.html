@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fernanda Muñoz Olivares</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="cow.png">
+  <link rel="stylesheet" href="style.css" />
+  <!-- Fuente similar a Copperplate Gothic -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Barra superior -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="cow.png" alt="Logo" class="logo-img">
+      <span>Fernanda Muñoz Olivares</span>
+    </div>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#cv">CV</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#about">About Me</a>
+      <a href="#outreach">Outreach</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="section home-section fade-in">
+    <div class="content-box home-box">
+      <img src="foto.png" alt="Fernanda Muñoz Olivares" class="profile-pic" />
+      <div class="description">
+        <h1>Welcome!</h1>
+        <p>
+          I am a researcher studying galaxy evolution and the cool
+          circumgalactic medium using gravitational lenses.
+        </p>
+        <div class="buttons">
+          <a href="#cv" class="btn">See my CV</a>
+          <a href="#research" class="btn">My Research</a>
+          <a href="#publications" class="btn">Read Publications</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CV -->
+  <section id="cv" class="section fade-in">
+    <div class="content-box">
+      <h2>Curriculum Vitae</h2>
+      <p><strong>Education:</strong><br>
+        2024 — Master's degree, Instituto de Astronomía, Pontificia Universidad Católica, Chile<br>
+        2019 — Bachelor's degree, Instituto de Astrofísica, Pontificia Universidad Católica, Chile
+      </p>
+      <p><strong>Research Experience:</strong><br>
+        Jan 2024 – March 2024 : ESO, Santiago, Chile - Summer Internship<br>
+        Jan 2023 – March 2023 : ESO, Santiago, Chile - Summer Internship<br>
+        Dec 2021 – Feb 2022 : Instituto de Astronomía, PUC, Chile - Summer Internship
+      </p>
+      <p>
+        My full CV is available in PDF format (last updated: October 2025).<br>
+        My Master thesis <em>“Revealing the CGM with an Einstein Cross”</em> will be available here.<br>
+        My Bachelor thesis <em>“Characteristics of a Galaxy Group at Intermediate Redshift”</em> will be available here.
+      </p>
+      <a href="cv.pdf" target="_blank" class="btn">Download CV</a>
+    </div>
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research" class="section fade-in">
+    <h2>Research</h2>
+
+    <div class="project">
+      <div class="project-text">
+        <h3>Revealing the CGM with an Einstein Cross</h3>
+        <p>
+          We present a tomographic study of the CGM of a star-forming galaxy at z=1.274, using an Einstein Cross...
+        </p>
+      </div>
+      <div class="project-image">
+        <img src="ec.png" alt="Einstein Cross project">
+      </div>
+    </div>
+
+    <div class="project reverse">
+      <div class="project-image">
+        <img src="group.png" alt="Galaxy group project">
+      </div>
+      <div class="project-text">
+        <h3>Kinematic characterization of the cool intragroup medium</h3>
+        <p>
+          The circumgalactic medium links galaxies to their large-scale environment, regulating accretion and feedback...
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications" class="section fade-in">
+    <div class="content-box">
+      <h2>Publications</h2>
+      <p>
+        <strong>Revealing the CGM with an Einstein Cross</strong> (Muñoz et al., in prep.)<br>
+        <strong>Large-scale rotational motions in the intragroup medium at z ∼ 1</strong> (Ledoux & Muñoz, submitted.)<br>
+        Links to arXiv will be added once published.
+      </p>
+    </div>
+  </section>
+
+  <!-- ABOUT ME -->
+  <section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <div class="content-box">
+      <p>
+        Master's student in astronomy. My interests focus on extragalactic astrophysics, galaxy evolution, and the circumgalactic medium...
+      </p>
+      <div class="photo-grid">
+        <img src="talk1.jpg" alt="Presentation 1">
+        <img src="talk2.jpg" alt="Presentation 2">
+        <img src="talk3.jpg" alt="Presentation 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTREACH -->
+  <section id="outreach" class="section fade-in">
+    <h2>Outreach</h2>
+    <div class="circle-photo-grid">
+      <div><img src="out1.jpg"><p>Assistant at Santa Martina Observatory (2022)</p></div>
+      <div><img src="out2.jpg"><p>Instructor of Python Graphing Workshop (2023)</p></div>
+      <div><img src="out3.jpg"><p>Instructor of LaTeX Workshop (2024/2025)</p></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section fade-in">
+    <div class="content-box contact-box">
+      <h2>Send me an email!</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Your email" required>
+        <input type="text" placeholder="Subject">
+        <textarea placeholder="Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send email</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
