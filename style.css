@@ -1,28 +1,45 @@
 /* Fuente elegante */
-.logo span,
+.logo span {
+  font-family: 'Poppins', sans-serif;
+  font-size: 21px;
+  padding: 2px 2px;
+  margin: 0 3px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 1000;
+  border-radius: 20px;
+  transition: all 0.2s ease;
+}
+
 .nav-links a {
-  font-family: 'Tinos', Georgia, serif; /* Cambia 'Tinos' por la que elijas */
-  font-weight: 700;
-  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  padding: 6px 12px;
+  margin: 0 3px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  border-radius: 20px;
+  transition: all 0.2s ease;
 }
 
 /* Logo con efecto brillante */
 .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 7px; /* espacio entre ícono y texto */
+  color: #3a1554; /* el color que tengas para el navbar */
+  text-decoration: none;
 }
 
 .logo-img {
   width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  height: auto;
 }
 
 .logo-img:hover {
   transform: scale(1.2) rotate(8deg);
-  filter: drop-shadow(0 0 8px rgb(255, 255, 228));
+  filter: drop-shadow(0 0 8px rgb(252, 252, 199));
 }
 
 /* NAVBAR */
@@ -31,58 +48,83 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(220, 211, 247, 0.85);
+  background-color: rgba(0, 0, 0, 0.813);
   backdrop-filter: blur(6px);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 60px;
   padding: 15px 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.642);
   z-index: 1000;
 }
 
 .nav-links a {
-  padding: 8px 12px;
-  margin: 0 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  padding: 8px 8px;
+  margin: 0 2px;
   text-decoration: none;
-  color: black;
-  font-weight: 500;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
   border-radius: 6px;
-  transition: all 0.2s ease;
 }
 
 .nav-links a:hover {
-  background-color: rgba(160, 253, 188, 0.4);
+  background-color: rgba(221, 105, 22, 0.4);
   color: rgb(255, 255, 255);
 }
 
 /* BODY y FONDO */
 body, html {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: url("image.jpg") center center fixed;
-  background-size: cover;
-  color: #000;
-  scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #b7cfe2; 
+    background-image: radial-gradient(rgba(0, 0, 0, 0.169) 1px, transparent 1px);
+    background-size: 20px 20px;  /* distancia entre puntitos */
+}
+
+body, p {
+  font-family: 'Lora', serif;
+  font-size: 17px;
+  color: #222;
+  line-height: 1.6;
 }
 
 /* SECCIONES */
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
 .section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 120px 20px 60px 20px;
+  padding: 30px 20px 60px 20px;
+}
+
+.section2{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 20px 60px 20px;
 }
 
 .content-box {
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(253, 243, 234, 0.905);
   border-radius: 15px;
-  padding: 40px;
-  max-width: 900px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 80px 60px;
+  max-width: 700px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.866);
   text-align: center;
 }
 
@@ -105,25 +147,25 @@ body, html {
 
 /* BOTONES */
 .btn {
-  background-color: rgb(177, 152, 197);
+  background-color: rgb(246, 221, 184);
   color: black;
   padding: 10px 20px;
   margin: 5px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.741);
   transition: all 0.2s ease;
 }
 
 .btn:hover {
-  background-color: rgb(175, 89, 245);
+  background-color: rgba(238, 133, 76, 0.647);
   transform: scale(1.05);
 }
 
 .btn:active {
   transform: scale(0.97);
-  background-color: rgb(190, 130, 235);
+  background-color: rgb(143, 172, 134);
 }
 
 /* RESEARCH */
@@ -151,21 +193,462 @@ body, html {
   text-align: left;
 }
 
-/* ABOUT y OUTREACH */
-.photo-grid, .circle-photo-grid {
+.project-text2 {
+  max-width: 1050px;
+  text-align: left;
+}
+
+.photo-grid {
   display: flex;
-  flex-wrap: wrap;
+  gap: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 10px;
+}
+
+.photo-grid figure {
+  flex: 0 0 auto;
+  width: 1000px;
+  text-align: center;
+}
+
+.highlight-orange {
+  color: rgb(171, 67, 12);
+  font-weight: 800;
+}
+
+.highlight-blue {
+  color: #5f83c6;
+  font-weight: 800;
+}
+
+.highlight-bluedark {
+  color: #4668a6;
+  font-weight: 800;
+}
+
+.cv-list {
+  list-style-type: "★ "; /* usa la estrellita o lo que quieras */
+  padding-left: 1.5em;   /* separa del borde */
+}
+
+.cv-list li {
+  margin-bottom: 5px;
+  text-align: justify;
+}
+
+/* ---- RESEARCH SECTION ---- */
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  gap: 40px;
+}
+
+.project-reverse {
+  flex-direction: column-reverse;
+}
+
+.project-text {
+  flex: 1;
+  text-align: justify;
+}
+
+.project-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.776);
+}
+
+/* efecto al pasar el mouse sobre las imágenes */
+.project-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+}
+
+.contact-container {
+  background: #f9f5f2; /* color crema suave */
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.815);
+  padding: 40px 60px;
+  max-width: 1000px;
+  margin: 50px auto;
+  font-family: 'Rubik', sans-serif;
+}
+
+.contact-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  color: #2b2b2b;
+}
+
+.contact-container p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 500;
+  margin-top: 15px;
+  color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 8px;
+  border: 1.5px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #c05919; /* color naranjo suave */
+  outline: none;
+}
+
+.send-btn {
+  margin-top: 25px;
+  background: linear-gradient(90deg, #0d5684e4, #89bacb); /* verde degradado */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  width: 100%;
+}
+
+.send-btn:hover {
+  background: linear-gradient(90deg, #89bacb, #0d5684e4);
+  transform: translateY(-2px);
+}
+
+.about-section p {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+.photo-grid {
+  display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
 }
 
 .photo-grid img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
+  width: 30%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
 }
 
+.photo-grid img:hover {
+  transform: scale(1.05);
+}
+
+.conference-list {
+  margin-top: 30px;
+}
+
+.conference-list h3,
+.hobbies h3 {
+  font-family: 'Rubik', sans-serif;
+  color: #498db5; /* tono morado */
+  margin-bottom: 10px;
+}
+
+.conference-list ul {
+  list-style-type: "- ";
+  padding-left: 15px;
+}
+
+.conference-list li {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.hobbies p {
+  margin-top: 15px;
+  text-align: justify;
+}
+
+.hobbies-grid img {
+  width: 22%;
+}
+
+.btn-external {
+  background-color: #829bb0; 
+  border: none;
+  color: rgb(0, 0, 0);
+}
+
+.btn-external:hover {
+  background-color: #55a3e8; /* tono más oscuro al pasar el mouse */
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* HOME section */
+.home-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px; /* separación entre imagen y texto */
+  flex-wrap: wrap; /* para que en pantallas pequeñas se ordene en columna */
+}
+
+.profile-pic {
+  width: 280px; /* tamaño de la imagen */
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Texto al lado derecho */
+.description {
+  flex: 1;
+  text-align: justify;
+}
+
+/* Botones */
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.photo-grid.equal-boxes {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: nowrap;       /* fila única */
+  overflow-x: auto;        /* permite desplazamiento horizontal */
+  -webkit-overflow-scrolling: touch;
+  padding: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.photo-grid.equal-boxes figure {
+  flex: 0 0 auto;          /* mantiene ancho fijo */
+  width: 320px;            /* ajusta aquí el "tamaño grande" deseado */
+  height: 300px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 6px 12px rgba(248, 161, 31, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-grid.equal-boxes img {
+  width: 100%;
+  height: calc(100% - 44px); /* espacio para caption */
+  object-fit: cover;
+  display: block;
+}
+
+.photo-grid.equal-boxes figcaption {
+  height: 44px;
+  padding: 8px;
+  font-size: 15px;
+  text-align: center;
+  background: rgba(179, 205, 235, 0.754);
+  box-sizing: border-box;
+}
+
+.container .photo-grid { max-width: none; width: 100%; }
+
+.hobbies-grid img {
+  width: 25%;
+}
+
+/* Cajita centrada y texto justificado */
+.outreach-section {
+  text-align: justify;
+  max-width: 900px; /* igual que tu otras cajitas */
+  margin: 0 auto;   /* centra la cajita */
+  padding: 20px;
+}
+
+/* Grid de fotos cuadradas */
+.circle-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 25px;
+  justify-items: center;
+}
+
+.circle-photo-grid div {
+  text-align: center;
+}
+
+/* Hace que todas las fotos sean cuadradas */
 .circle-photo-grid img {
-  width: 
+  width: 600px;
+  height: 500px;
+  object-fit: cover; /* corta la imagen manteniendo proporción */
+  border-radius: 10px; /* si quieres esquinas redondeadas */
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.circle-photo-grid p {
+  margin-top: 8px;
+  font-size: 1.0rem;
+  color: #333;
+}
+
+.content-box2 {
+  max-width: 900px;
+  margin: 40px auto;   /* esto la centra horizontalmente */
+  background: rgba(253, 243, 234, 0.905);     /* o el color que uses para las otras cajas */
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.612);
+  padding: 60px;
+}
+
+.outreach-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px 60px 20px;
+}
+
+
+.circle-photo-grid img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle-photo-grid img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* ---- PHOTO COLLAGE (Analog Photography) ---- */
+.hobbies-grid {
+  column-count: 3; /* número de columnas (ajusta según pantalla) */
+  column-gap: 10px;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hobbies-grid img {
+  width: 30%;
+  margin-bottom: 0px;
+  border-radius: 0px; /* bordes suaves (pon 0px si los quieres rectos) */
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  break-inside: avoid; /* evita cortes entre columnas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hobbies-grid img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsivo */
+@media (max-width: 300px) {
+  .hobbies-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 300px) {
+  .hobbies-grid {
+    column-count: 1;
+  }
+}
+
+/* ---- LIGHTBOX ---- */
+.lightbox {
+  display: none; /* oculto al inicio */
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Botón de cerrar */
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.lightbox .close:hover {
+  color: #ccc;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.footer {
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  padding: 12px 0;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  font-family: 'Lora', serif;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.14);
+}
+
+
+.profile-pic {
+  width: 280px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.profile-pic:hover {
+  transform: scale(1.08); /* agranda la imagen */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.756); /* agrega una sombra suave */
+}
