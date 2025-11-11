@@ -40,17 +40,17 @@
     <p>Feel free to send me an email</p>
 
     <form action="https://formspree.io/f/xpwovqje" method="POST" class="contact-form">
-      <label>Your name</label>
-      <input type="text" name="name" placeholder="Your name" required>
+      <label for="name">Your name</label>
+      <input id="name" type="text" name="name" placeholder="Your name" required>
 
-      <label>Your email</label>
-      <input type="email" name="email" placeholder="name@example.com" required>
+      <label for="email">Your email</label>
+      <input id="email" type="email" name="_replyto" placeholder="name@example.com" required>
 
-      <label>Subject</label>
-      <input type="text" name="subject" placeholder="What would you like to talk about?">
+      <label for="subject">Subject</label>
+      <input id="subject" type="text" name="subject" placeholder="What would you like to talk about?">
 
-      <label>Message</label>
-      <textarea name="message" placeholder="Write your message here..." rows="5" required></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." rows="5" required></textarea>
 
       <button type="submit" class="send-btn">Send email</button>
     </form>
