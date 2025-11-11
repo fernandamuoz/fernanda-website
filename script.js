@@ -42,26 +42,3 @@ faders.forEach(fader => {
     }
   });
 </script>
-
-// ---- CONTACT FORM ----
-document.getElementById("contact-form").addEventListener("submit", async function(event) {
-  event.preventDefault();
-
-  const form = event.target;
-  const data = new FormData(form);
-
-  const response = await fetch("https://formspree.io/f/xpwovqje", {
-    method: "POST",
-    body: data,
-    headers: {
-      'Accept': 'application/json'
-    }
-  });
-
-  if (response.ok) {
-    alert("✅ Your message was sent successfully!");
-    form.reset();
-  } else {
-    alert("❌ Oops! There was a problem sending your message.");
-  }
-});
