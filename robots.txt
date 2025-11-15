@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fernandamuoz.github.io/fernanda-website
