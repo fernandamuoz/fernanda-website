@@ -746,3 +746,50 @@ h1, h2, h3 {
     font-size: 1.4rem;
   }
 }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* En móviles */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.88);
+    backdrop-filter: blur(6px);
+    padding: 15px;
+    border-radius: 10px;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    display: block;
+    padding: 10px 12px;
+  }
+
+  .nav-links.show {
+    display: flex; /* aparece el menú */
+  }
+
+}
