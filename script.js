@@ -90,32 +90,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 </script>
 
-// Hamburguer toggle + auto-close on link click
-document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
 
   if (!hamburger || !navLinks) return;
 
-  hamburger.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('show');
-    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
   });
 
-  // cerrar menú al hacer click en cualquier enlace (útil en mobile)
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      navLinks.classList.remove('show');
-      hamburger.setAttribute('aria-expanded', 'false');
+  // Cerrar menú cuando se toca un link
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("show");
     });
-  });
-
-  // opcional: cerrar al hacer click fuera del menú
-  document.addEventListener('click', (e) => {
-    if (!navLinks.classList.contains('show')) return;
-    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
-      navLinks.classList.remove('show');
-      hamburger.setAttribute('aria-expanded', 'false');
-    }
   });
 });
