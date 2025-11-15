@@ -42,3 +42,41 @@ faders.forEach(fader => {
     }
   });
 </script>
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("contact-status");
+  const endpoint = "https://formsubmit.co/ajax/fernanda.muoz@uc.cl";
+
+  if (!form || !status) return;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    status.textContent = "Sending...";
+    status.className = "contact-form__status is-pending";
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        status.textContent = "Message sent successfully! ✨";
+        status.className = "contact-form__status is-success";
+        form.reset();
+      } else {
+        throw new Error();
+      }
+
+    } catch (error) {
+      status.textContent = "Error sending message. Please try again.";
+      status.className = "contact-form__status is-error";
+    }
+  });
+});
