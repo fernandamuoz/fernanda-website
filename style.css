@@ -120,6 +120,7 @@ h1, h2, h3 {
 }
 
 .content-box {
+  width: 90%;
   background-color: rgba(253, 243, 234, 0.905);
   border-radius: 15px;
   padding: 80px 60px;
@@ -519,6 +520,7 @@ h1, h2, h3 {
 }
 
 .content-box2 {
+  width: 90%;
   max-width: 900px;
   margin: 40px auto;   /* esto la centra horizontalmente */
   background: rgba(253, 243, 234, 0.905);     /* o el color que uses para las otras cajas */
@@ -679,4 +681,68 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+
+@media (max-width: 768px) {
+
+  .photo-grid,
+  .hobbies-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columnas en tablet y celular grande */
+  }
+
+  @media (max-width: 480px) {
+    .photo-grid,
+    .hobbies-grid {
+      grid-template-columns: 1fr; /* 1 columna en celular pequeño */
+    }
+  }
+
+  .circle-photo-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .circle-photo-grid div img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.home-box {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .home-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-box img {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1, h2 {
+    font-size: 1.4rem;
+  }
 }
