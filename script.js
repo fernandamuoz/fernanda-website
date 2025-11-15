@@ -89,3 +89,33 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.classList.toggle("show");
   });
 </script>
+
+// Hamburguer toggle + auto-close on link click
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  if (!hamburger || !navLinks) return;
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('show');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  // cerrar menú al hacer click en cualquier enlace (útil en mobile)
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // opcional: cerrar al hacer click fuera del menú
+  document.addEventListener('click', (e) => {
+    if (!navLinks.classList.contains('show')) return;
+    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+      navLinks.classList.remove('show');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
