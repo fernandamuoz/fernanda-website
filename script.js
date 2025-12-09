@@ -116,3 +116,44 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");    // muestra/oculta el menú
   hamburger.classList.toggle("open");     // animación del ícono
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
+
+  if (!hamburger || !navLinks) {
+    console.warn("No se encontró #hamburger o #nav-links en el DOM");
+    return;
+  }
+
+  hamburger.addEventListener("click", (e) => {
+    // Evita que otro elemento absorba el click
+    e.stopPropagation();
+
+    // Alterna estado accesible
+    const expanded = hamburger.getAttribute("aria-expanded") === "true";
+    hamburger.setAttribute("aria-expanded", String(!expanded));
+
+    // Alterna clase CSS que muestra/oculta el menú
+    navLinks.classList.toggle("open");
+  });
+
+  // Cerrar menú si se hace click fuera de él (mejora UX)
+  document.addEventListener("click", (evt) => {
+    if (navLinks.classList.contains("open")) {
+      const target = evt.target;
+      if (!navLinks.contains(target) && target !== hamburger && !hamburger.contains(target)) {
+        navLinks.classList.remove("open");
+        hamburger.setAttribute("aria-expanded", "false");
+      }
+    }
+  });
+
+  // Cerrar con ESC
+  document.addEventListener("keydown", (evt) => {
+    if (evt.key === "Escape" && navLinks.classList.contains("open")) {
+      navLinks.classList.remove("open");
+      hamburger.setAttribute("aria-expanded", "false");
+    }
+  });
+});
