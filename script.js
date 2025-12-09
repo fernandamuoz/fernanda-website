@@ -116,10 +116,3 @@ hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active");    // muestra/oculta el menú
   hamburger.classList.toggle("open");     // animación del ícono
 });
-
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("nav-links");
-
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
