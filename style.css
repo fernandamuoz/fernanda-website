@@ -904,3 +904,95 @@ h1, h2, h3 {
     font-size: 16px;
   }
 }
+
+/* ============================
+  HAMBURGUESA: CSS seguro
+   (pegar al final de style.css)
+   ============================ */
+
+/* Asegura que el botón sea clickable y visible */
+.hamburger {
+  display: none;               /* se mostrará por media query */
+  z-index: 2002;               /* encima de todo */
+  position: relative;
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+/* barras de la hamburguesa */
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  margin: 4px 0;
+  background: white;
+  border-radius: 3px;
+  transition: transform .25s ease, opacity .25s ease;
+}
+
+/* MENU por defecto (escritorio) */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  z-index: 2000;
+}
+
+/* MODO MÓVIL */
+@media (max-width: 850px) {
+
+  /* muestra el botón */
+  .hamburger {
+    display: flex;
+  }
+
+  /* posicionamos el nav como panel desplegable */
+  .nav-links {
+    position: absolute;
+    top: 64px;                     /* just debajo del header */
+    right: 12px;
+    left: 12px;                    /* ocupa ancho con márgenes */
+    background: rgba(10, 10, 12, 0.95);
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 12px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+
+    /* estado oculto inicial con bloqueo de clicks */
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity .22s ease, transform .22s ease;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 6px;
+    font-size: 18px;
+  }
+
+  /* cuando está abierto */
+  .nav-links.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  /* evita que el nav cubra el botón (si acaso) */
+  header.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2001; /* header encima del contenido, pero debajo del hamburger */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+}
